@@ -1,5 +1,4 @@
-# breathing_app
-
+# dont_panic
 A new Flutter project.
 
 ## Getting Started
