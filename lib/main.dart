@@ -1,3 +1,4 @@
+import 'package:breathe/mantra.dart';
 import 'package:flutter/material.dart';
 import 'breathing.dart';
 
@@ -13,7 +14,9 @@ class DontPanicApp extends StatelessWidget {
     return MaterialApp(
       title: "Don't Panic",
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+        ),
       ),
       darkTheme: ThemeData.dark(),
       home: const MyHomePage(
@@ -38,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   // Define pages for bottom nav
   final List<Widget> _pages = [
     const Breathing(),
+    const Mantra(),
     // Add pages here
   ];
 
@@ -60,6 +64,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             icon: Icon(Icons.air),
             label: "Breathe",
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.psychology),
+            label: "Mantra",
+          )
           // Add nav bar items here
         ],
         currentIndex: _selectedIndex,
