@@ -54,24 +54,21 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
+      bottomNavigationBar: NavigationBar(
+        destinations: const <Widget>[
+          NavigationDestination(
             icon: Icon(Icons.air),
             label: "Breathe",
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.psychology),
             label: "Mantra",
           )
           // Add nav bar items here
         ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        onDestinationSelected: _onItemTapped,
+        selectedIndex: _selectedIndex,
       ),
     );
   }
