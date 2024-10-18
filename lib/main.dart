@@ -1,6 +1,6 @@
-import 'package:breathe/mantra.dart';
 import 'package:flutter/material.dart';
 import 'breathing.dart';
+import 'mantra.dart';
 
 void main() {
   runApp(const DontPanicApp());

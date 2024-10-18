@@ -1,4 +1,4 @@
-package com.example.breathing_app
+package ca.ericthomas.dontpanic
 
 import io.flutter.embedding.android.FlutterActivity
 
